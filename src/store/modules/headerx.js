@@ -77,9 +77,7 @@ const headerx = {
       if (serverhost === '') {
         serverhost = 'http://127.0.0.1:9200'
       }
-      if (serverhost.indexOf('http://') === -1) {
-        serverhost = 'http://' + serverhost
-      }
+
       commit('SET_SERVER_HOST', serverhost)
       VueCookie.set('elasticHDServerHost', serverhost, { expires: '1D' })
       window.location.reload()
